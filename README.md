@@ -34,12 +34,12 @@ Free plan offered by PythonAnywhere only support SQLite so the server runs quite
   'https://hunghoang1110.pythonanywhere.com/api/v1/books/?genre=Novel' \
   -H 'accept: application/json'`
 
-- Can upload an image with the book cover.
+- Can upload an image with the book cover. ✅
     * **AWS S3** is a popular choice of media file storage. So let's try with it.
     * There're a few ways to programmatically upload an object to an S3 bucket. I prefer "Presigned URL" approach in this case. More details:  [Boto3 docs](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-presigned-urls.html), [API](https://hunghoang1110.pythonanywhere.com/api/v1/open-api/ui/#/media/media_s3_presigned_url_create)
     * [Live demo](https://hunghoang1110.pythonanywhere.com/books/list-book/)
     * Due to time constraint, I'm not able to have a frontend page for users to manually upload images. For demo purpose, I write Python script to upload images to S3.
-- Setup CI
+- Setup CI ✅
     * Github Action does a good job at CI pipeline so I took advantage of it.
     * The CI pipeline would check coding convention (flake8, isort, etc.) enabled by [pre-commit](https://github.com/pre-commit/pre-commit) and run unit tests on new pull requests and merges on `main` branch.
     * We can check out CI runs at: https://github.com/hoangquochung1110/challenge-ocelot/actions
